@@ -9,8 +9,24 @@ mongoose.connect(process.env.MONGODB_URI)
 .catch((err) => console.error("MongoDB connection error", err))
 
 import express from "express";
-import cors from "cors"
+import cors from "cors" 
 const app = express();
+
+const express = require('express');
+const mongoose = require('mongoose');
+const registerRoutes = require('./routes/registerRoute'); // adjust path
+app.use(express.json());
+
+// connect DB
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.error("Mongo Error:", err.message));
+
+// test route
+app.use('/api/auth', registerRoutes);
+
+app.listen(5000, () => console.log("Server running on port 5000"));
+
 
 // ----- Middleware
 app.use(express.json());
