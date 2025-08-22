@@ -1,0 +1,21 @@
+{
+  "name": "studysync-backend",
+  "version": "1.0.0",
+  "description": "Auth API for StudySync",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.6.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
