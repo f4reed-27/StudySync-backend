@@ -12,8 +12,7 @@ import express from "express";
 import cors from "cors" 
 const app = express();
 
-const express = require('express');
-const mongoose = require('mongoose');
+
 const registerRoutes = require('./routes/registerRoute'); // adjust path
 app.use(express.json());
 
